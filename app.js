@@ -36,8 +36,8 @@ c. Generavimo metu “Dingo” background’ą nuspalvinkite mėlynai. (5 taška
 
 
 
-const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
-const australia = ['Kengūra', 'Ančiasnapis', 'Dingo', 'Atsirado', 'Strutis'];
+// const africa = ['Zebras', 'Liūtas',  '', 'Raganosis', '','Raganosis', 'Begemotas'];
+// const australia = ['Kengūra', 'Ančiasnapis', 'Dingo', 'Atsirado', 'Strutis'];
 
 function rand(min, max) {
     min = Math.ceil(min);
@@ -63,7 +63,7 @@ b1.addEventListener('click', () => {
     h2.innerText = a2;
 
 // b.
-    if (a1 == a2) {
+    if (a1 === a2) {
         h1.style.color = 'red';
         h2.style.color = 'red';
 
@@ -78,3 +78,58 @@ b1.addEventListener('click', () => {
 // 2.
 
 console.log('2 ******************************');
+
+const array = [];
+
+const h3 = document.querySelector('#count');
+const b2 = document.querySelector('#btn2');
+
+h3.innerText = 0;
+
+b2.addEventListener('click', () => {
+    const n1 = rand(1, 10);
+    array.push(n1);
+    const sum = parseInt(h3.innerText) + n1;
+    h3.innerText = sum;
+    console.log(array);
+
+
+});
+
+
+
+// 3.
+
+console.log('3 ******************************');
+
+
+const africa = ['Zebras', 'Liūtas', '', 'Raganosis', '', 'Raganosis', 'Begemotas'];
+
+console.log(africa)
+
+
+const list = document.querySelector('#africa');
+
+africa.forEach(zoo => {
+    if (zoo) {
+        const p = document.createElement('li');
+        const txt = document.createTextNode(zoo);
+        p.appendChild(txt);
+        list.appendChild(p);
+    }
+});
+
+
+// 4.
+
+console.log('4 ******************************');
+
+
+
+
+
+
+// 5.
+
+console.log('5 ******************************');
+
